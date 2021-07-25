@@ -15,7 +15,7 @@
 ---
 <!-- -------------------------------------------------------------------------------------------------- -->
 
-<img align="right" width="20%" src="./ReadmeContents/COVER.png">
+<img align="right" width="20%" src="./readme_images/COVER.png">
 
 <code style="margin-right:3%;">
 \COVER[image path]
@@ -38,7 +38,7 @@
 ---
 <!-- -------------------------------------------------------------------------------------------------- -->
 
-<img align="left" width="50%" src="./ReadmeContents/p.png">
+<img align="left" width="50%" src="./readme_images/p.png">
 
 <code style="margin-left:3%;">
 \p
@@ -71,7 +71,7 @@ $X = \{x_1, x_2, x_3, \cdots, x_n\}$
 ---
 <!-- -------------------------------------------------------------------------------------------------- -->
 
-<img align="right" width="20%" src="./ReadmeContents/TOC.png">
+<img align="right" width="20%" src="./readme_images/TOC.png">
 
 <code style="margin-right:3%;">
 \TOC
@@ -94,7 +94,7 @@ $X = \{x_1, x_2, x_3, \cdots, x_n\}$
 ---
 <!-- -------------------------------------------------------------------------------------------------- -->
 
-<img align="left" width="20%" src="./ReadmeContents/CHAPTER.png">
+<img align="left" width="20%" src="./readme_images/CHAPTER.png">
 
 <code style="margin-left:3%;">
 \CHAPTER[image path]{chapter name}{introduction paragraph}
@@ -127,7 +127,7 @@ $X = \{x_1, x_2, x_3, \cdots, x_n\}$
 ---
 <!-- -------------------------------------------------------------------------------------------------- -->
 
-<img align="right" width="50%" src="./ReadmeContents/SECTION.png">
+<img align="right" width="50%" src="./readme_images/SECTION.png">
 
 <code style="margin-right:3%;">
 \SECTION{section name}
@@ -149,7 +149,7 @@ $X = \{x_1, x_2, x_3, \cdots, x_n\}$
 ---
 <!-- -------------------------------------------------------------------------------------------------- -->
 
-<img align="left" width="30%" src="./ReadmeContents/SUBSECTION.png">
+<img align="left" width="30%" src="./readme_images/SUBSECTION.png">
 
 <code style="margin-left:3%;">
 \SUBSECTION{subsection name}
@@ -169,7 +169,7 @@ $X = \{x_1, x_2, x_3, \cdots, x_n\}$
 ---
 <!-- -------------------------------------------------------------------------------------------------- -->
 
-<img align="right" width="55%" src="./ReadmeContents/FOCUSEDON.png">
+<img align="right" width="55%" src="./readme_images/FOCUSEDON.png">
 
 <code style="margin-right:3%;">
 \FOCUSEDON{word}
@@ -193,7 +193,7 @@ $X = \{x_1, x_2, x_3, \cdots, x_n\}$
 ---
 <!-- -------------------------------------------------------------------------------------------------- -->
 
-<img align="left" width="60%" src="./ReadmeContents/DEFINISION.png">
+<img align="left" width="60%" src="./readme_images/DEFINISION.png">
 
 <code style="margin-left:3%;">
 \begin{DEFINISION} ... \end{DEFINISION}
@@ -222,7 +222,7 @@ $X = \{x_1, x_2, x_3, \cdots, x_n\}$
 ---
 <!-- -------------------------------------------------------------------------------------------------- -->
 
-<img align="right" width="55%" src="./ReadmeContents/THEOREM.png">
+<img align="right" width="55%" src="./readme_images/THEOREM.png">
 
 <code style="margin-right:3%;">
 \begin{THEOREM} ... \end{THEOREM}
@@ -251,7 +251,7 @@ $X = \{x_1, x_2, x_3, \cdots, x_n\}$
 ---
 <!-- -------------------------------------------------------------------------------------------------- -->
 
-<img align="left" width="50%" src="./ReadmeContents/EXTRA.png">
+<img align="left" width="50%" src="./readme_images/EXTRA.png">
 
 <code style="margin-left:3%;">
 \begin{EXTRA}[extra logo path]{extra name} ... \end{EXTRA}
@@ -279,7 +279,7 @@ $X = \{x_1, x_2, x_3, \cdots, x_n\}$
 ---
 <!-- -------------------------------------------------------------------------------------------------- -->
 
-<img align="right" width="45%" src="./ReadmeContents/PROBLEM,SOLUTION.png">
+<img align="right" width="45%" src="./readme_images/PROBLEM,SOLUTION.png">
 
 <code style="margin-right:3%;">
 \begin{PROBLEM}[problem name] ... \end{THEOREM}
@@ -314,7 +314,7 @@ $X = \{x_1, x_2, x_3, \cdots, x_n\}$
 \end{PROBLEM}
 ```
 
-<img align="right" width="45%" src="./ReadmeContents/PROBLEM,SOLUTION2.png">
+<img align="right" width="45%" src="./readme_images/PROBLEM,SOLUTION2.png">
 
 ```latex
 \begin{PROBLEM}[قضیه‌ی زیردنباله]
@@ -337,7 +337,7 @@ $X = \{x_1, x_2, x_3, \cdots, x_n\}$
 ---
 <!-- -------------------------------------------------------------------------------------------------- -->
 
-<img align="left" width="50%" src="./ReadmeContents/NOTE.png">
+<img align="left" width="50%" src="./readme_images/NOTE.png">
 
 <code style="margin-left:3%;">
 \NOTE[right-margin]{text}
@@ -377,7 +377,7 @@ $X = \{x_1, x_2, x_3, \cdots, x_n\}$
 ---
 <!-- -------------------------------------------------------------------------------------------------- -->
 
-<img align="right" width="40%" src="./ReadmeContents/EPROBLEM.png">
+<img align="right" width="40%" src="./readme_images/EPROBLEM.png">
 
 <code style="margin-right:3%;">
 \EPROBLEM
@@ -400,7 +400,7 @@ $X = \{x_1, x_2, x_3, \cdots, x_n\}$
 ---
 <!-- -------------------------------------------------------------------------------------------------- -->
 
-<img align="left" width="40%" src="./ReadmeContents/ESOLUTION.png">
+<img align="left" width="40%" src="./readme_images/ESOLUTION.png">
 
 <code style="margin-left:3%;">
 \ESOLUTION[solution name]{solution body ...}
@@ -429,7 +429,7 @@ $X = \{x_1, x_2, x_3, \cdots, x_n\}$
 ---
 <!-- -------------------------------------------------------------------------------------------------- -->
 
-<img align="right" width="40%" src="./ReadmeContents/EWSOLUTION.png">
+<img align="right" width="40%" src="./readme_images/EWSOLUTION.png">
 
 <code style="margin-right:3%;">
 \EWSOLUTION[solution name]{solution body ...}
@@ -457,7 +457,7 @@ $X = \{x_1, x_2, x_3, \cdots, x_n\}$
 ---
 <!-- -------------------------------------------------------------------------------------------------- -->
 
-<img align="left" width="20%" src="./ReadmeContents/EXERCISE.png">
+<img align="left" width="20%" src="./readme_images/EXERCISE.png">
 
 <code style="margin-left:3%;">
 \EXERCISE
@@ -486,7 +486,7 @@ $X = \{x_1, x_2, x_3, \cdots, x_n\}$
 ---
 <!-- -------------------------------------------------------------------------------------------------- -->
 
-<img align="right" width="40%" src="./ReadmeContents/SOURCE.png">
+<img align="right" width="40%" src="./readme_images/SOURCE.png">
 
 <code style="margin-right:3%;">
 \SOURCE{logo-name}
@@ -528,7 +528,7 @@ $X = \{x_1, x_2, x_3, \cdots, x_n\}$
 ---
 <!-- -------------------------------------------------------------------------------------------------- -->
 
-<img align="left" width="20%" src="./ReadmeContents/REF.png">
+<img align="left" width="20%" src="./readme_images/REF.png">
 
 <code style="margin-left:3%;">
 \REF{source-name}
@@ -552,7 +552,7 @@ source-name
 ---
 <!-- -------------------------------------------------------------------------------------------------- -->
 
-<img align="right" width="20%" src="./ReadmeContents/TARGET.png">
+<img align="right" width="20%" src="./readme_images/TARGET.png">
 
 <code style="margin-right:3%;">
 \TARGET[what we see]{key}
@@ -583,7 +583,7 @@ key
 ---
 <!-- -------------------------------------------------------------------------------------------------- -->
 
-<img align="left" width="40%" src="./ReadmeContents/CROSSREF.png">
+<img align="left" width="40%" src="./readme_images/CROSSREF.png">
 
 <code style="margin-left:3%;">
 \CROSSREF[what we see]{key}
@@ -606,7 +606,7 @@ key
 ---
 <!-- -------------------------------------------------------------------------------------------------- -->
 
-<img align="right" width="40%" src="./ReadmeContents/AFFILIATION.png">
+<img align="right" width="40%" src="./readme_images/AFFILIATION.png">
 
 <code style="margin-right:3%;">
 \begin{AFFILIATIONS} ... \end{AFFILIATIONS}
