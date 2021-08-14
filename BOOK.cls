@@ -148,7 +148,7 @@
 %--------------------------------------------------------------------------
 \newcounter{chapter}
 
-\newcommand{\CHAPTER}[3][\templateroot/images/background.jpg]{
+\newcommand{\CHAPTER}[4][\templateroot/images/background.jpg]{
     \newpage
     \thispagestyle{empty}
     \refstepcounter{chapter}
@@ -174,6 +174,11 @@
     \vspace{1.5cm}
     \p
     #3
+
+    \begin{flushleft}
+        عکس از:
+        #4
+    \end{flushleft}
 
     \newpage
 }
