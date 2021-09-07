@@ -58,7 +58,6 @@
 \usepackage{pbox}
 \usepackage{amssymb}
 \usepackage{xifthen}
-\usepackage{extarrows}
 
 \RequirePackage[extrafootnotefeatures]{xepersian}
 \settextfont[
@@ -102,6 +101,8 @@
 \definecolor{definitiongreen}{RGB}{21,122,81}
 \definecolor{extrayellow}{RGB}{255,185,88}
 \definecolor{solutiongreen}{rgb}{0.1,0.7,0.1}
+\definecolor{darkgreen}{rgb}{0.2, 0.7, 0.33}
+\definecolor{darkred}{rgb}{0.88, 0.35, 0.15}
 % \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 % \definecolor{codepurple}{rgb}{0.58,0,0.82}
 
@@ -309,7 +310,7 @@
 
 % end problem styling
 %--------------------------------------------------------------------------
-\newcommand{\EPROBLEM}[0]{
+\newcommand{\COLOREDEPROBLEM}[2][]{
     \begin{tcolorbox}[
         enhanced jigsaw,
         breakable,
@@ -317,10 +318,14 @@
         colback=white,
         boxrule=0pt,
         frame hidden,
-        borderline north={1.5mm}{-1mm}{black!10}]
-    \vspace{-10mm}\hspace{-5mm}{\colorbox{black!10}{\refstepcounter{problem}\par\medskip{~\theproblem}}}
+        borderline north={1.5mm}{-1mm}{#2}]
+    \vspace{-10mm}\hspace{-5mm}{\colorbox{#2}{\refstepcounter{problem}\par\medskip{~\theproblem} #1}}
     \end{tcolorbox}
     \vspace{1mm}
+}
+
+\newcommand{\EPROBLEM}[1][]{
+    \COLOREDEPROBLEM[#1]{black!10}
 }
 
 % end wrong solution  styling
@@ -436,4 +441,40 @@
     \pbox{0.3\textwidth}{#1} & \pbox{0.3\textwidth}{#4} & \pbox{0.3\textwidth}{#7} \\
     \tiny{\pbox{0.3\textwidth}{\centering#2}} & \tiny{\pbox{0.3\textwidth}{\centering#5}} & \tiny{\pbox{0.3\textwidth}{\centering#8}} \\
     \tiny{#3} & \tiny{#6} & \tiny{#9} \\
+}
+
+
+% CODE styling
+%--------------------------------------------------------------------------
+\lstset
+{
+    language=C++,
+    basicstyle=\scriptsize\color{darkred}\ttfamily,
+    identifierstyle=\color{black}\ttfamily,
+    keywordstyle=\color{blue}\ttfamily,
+    stringstyle=\color{orange}\ttfamily,
+    commentstyle=\color{gray}\ttfamily,
+    numbers=left,
+    numbersep=10pt,
+    numberstyle=\footnotesize\color{lightgray}\ttfamily,
+    backgroundcolor = \color{lightgray!35},
+    framexleftmargin = 1em,
+        literate=*
+        {0}{{{\color{black}0}}}{1}
+        {1}{{{\color{black}1}}}{1}
+        {2}{{{\color{black}2}}}{1}
+        {3}{{{\color{black}3}}}{1}
+        {4}{{{\color{black}4}}}{1}
+        {5}{{{\color{black}5}}}{1}
+        {6}{{{\color{black}6}}}{1}
+        {7}{{{\color{black}7}}}{1}
+        {8}{{{\color{black}8}}}{1}
+        {9}{{{\color{black}9}}}{1}
+        {.}{{{\color{black}.}}}{1}
+        {;}{{{\color{darkgreen};}}}{1},
+}
+\newcommand{\CODE}[1]{
+    \LR{
+        \lstinputlisting{#1}
+    }
 }
