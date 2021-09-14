@@ -7,6 +7,8 @@
 آماده شده است اما
 `Xelatex 2019`
 نیز به خوبی با آن هماهنگ است.
+<a href="https://github.com/OpenBookshelf/PersianTextbookTemplate/blob/master/example/main.pdf">این</a>
+یک نمونه از خروجی حاصل از این قالب است.
 دستورات آماده شده در این قالب به همراه نحوه استفاده، نمونه‌ی استفاده و خروجی متناظر
 در زیر فهرست شده‌اند:
 </p>
