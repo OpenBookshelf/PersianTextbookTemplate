@@ -62,11 +62,26 @@
 \RequirePackage[extrafootnotefeatures]{xepersian}
 \settextfont[
     Path={\templateroot/fonts/},
-    BoldFont={IRLotusICEE_Bold.ttf},
-    BoldItalicFont={IRLotusICEE_BoldIranic.ttf},
-    ItalicFont={IRLotusICEE_Iranic.ttf},Scale=1.2
-    ]{IRZar.ttf}
-\setdigitfont[Path={\templateroot/fonts/}]{IRZar.ttf}
+    BoldFont={B_Nazanin_Bold.ttf},
+    ItalicFont={B_Nazanin_Italic.ttf},
+    Scale=1.0
+    ]{B_Nazanin.ttf}
+% \setdigitfont[
+%     Path={\templateroot/fonts/}
+%     ]{IRZar.ttf}
+\newfontfamily\Titr[
+    Path={\templateroot/fonts/},
+    ]{B_Titr_Bold.ttf}
+\newfontfamily\Mitra[
+    Path={\templateroot/fonts/},
+    BoldFont={B_Mitra_Bold.ttf},
+    ItalicFont={B_Mitra_Italic.ttf}
+    ]{B_Mitra.ttf}
+\newfontfamily\Yagut[
+    Path={\templateroot/fonts/},
+    BoldFont={B_Mitra_Bold.ttf},
+    ]{B_Yagut.ttf}
+
 
 \pagestyle{fancy}
 \fancyhf{} 
@@ -93,18 +108,22 @@
 
 % Colors
 %--------------------------------------------------------------------------
+% color palette: https://coolors.co/ffffff-000000-a33602-c7cc3e-3e3bbd-909d6c-7e93f1-030352-868686-a6af46
 \RequirePackage{xcolor}
-\definecolor{sectionblue}{RGB}{90,150,200}
-\definecolor{subsectionblue}{RGB}{100,160,200}
-\definecolor{extraorange}{RGB}{255,138,88}
-\definecolor{theoremblue}{RGB}{23,74,117}
-\definecolor{definitiongreen}{RGB}{21,122,81}
-\definecolor{extrayellow}{RGB}{255,185,88}
-\definecolor{solutiongreen}{rgb}{0.1,0.7,0.1}
+\definecolor{sectionblue}{RGB}{62, 59, 189}
+\definecolor{subsectionblue}{RGB}{62, 59, 189}
+\definecolor{extraorange}{RGB}{173, 177, 47}
+\definecolor{extrayellow}{RGB}{166, 175, 70}
+\definecolor{theoremblue}{RGB}{3, 3, 82}
+\definecolor{definitiongreen}{RGB}{149, 157, 62}
+\definecolor{definitionyellow}{RGB}{144, 157, 108}
+\definecolor{focusedcolor}{RGB}{126, 147, 241}
+\definecolor{problembordercolor}{RGB}{134, 134, 134}
+\definecolor{solutiongreen}{RGB}{199, 204, 62}
+\definecolor{solutionred}{RGB}{163, 54, 2}
 \definecolor{darkgreen}{rgb}{0.2, 0.7, 0.33}
 \definecolor{darkred}{rgb}{0.88, 0.35, 0.15}
-% \definecolor{codegray}{rgb}{0.5,0.5,0.5}
-% \definecolor{codepurple}{rgb}{0.58,0,0.82}
+
 
 
 % paragraph styling
@@ -154,7 +173,7 @@
     \newpage
     \thispagestyle{empty}
     \refstepcounter{chapter}
-    \markboth{#2}{}
+    \markboth{\Titr\scriptsize #2}{}
     
     \begin{tikzpicture}[remember picture,overlay]
         \node at (current page.north west) {
@@ -168,9 +187,9 @@
     
     \vspace*{\fill}
 
-    فصل \medskip{~\thechapter}
+    {\Titr فصل \medskip{~\thechapter}}
 
-    {\Huge #2}
+    {\Titr\Huge #2}
     \addcontentsline{toc}{part}{\Large{\textbf{#2}}}
     
     \vspace{1.5cm}
@@ -189,8 +208,8 @@
 %--------------------------------------------------------------------------
 \newcommand{\SECTION}[1]{
     
-    \section*{\color{sectionblue}{#1}}
-    \markright{#1}
+    \section*{\color{sectionblue}{\Titr\LARGE #1}}
+    \markright{\Titr\scriptsize #1}
     \addcontentsline{toc}{section}{#1}
     \vspace{-12mm}
     {\textcolor{sectionblue}{\noindent\rule{\textwidth}{0.8pt}}}
@@ -199,7 +218,7 @@
 % SubSection styling
 %--------------------------------------------------------------------------
 \newcommand{\SUBSECTION}[1]{
-    \subsection*{\hspace{7mm}\color{subsectionblue}{#1}}
+    \subsection*{\hspace{7mm}\color{subsectionblue}{\Titr #1}}
     \addcontentsline{toc}{subsection}{\small{#1}}
     \vspace{-12mm}
     {\textcolor{subsectionblue}{\noindent\rule{0.4\textwidth}{0.8pt}}}
@@ -212,22 +231,23 @@
     enhanced jigsaw,
     breakable,
     pad at break*=1mm,
-    colback=yellow!10!white,
+    colback=definitionyellow!20,
     boxrule=0pt,
     frame hidden,
-    borderline east={1.5mm}{-2mm}{definitiongreen}]}
+    borderline east={1.5mm}{0mm}{definitiongreen!90}
+    ]}
 {\end{tcolorbox}}
 
 % focused
 %--------------------------------------------------------------------------
-\newcommand{\FOCUSEDON}[1]{‌{\scriptsize\color{magenta}{#1}}}
+\newcommand{\FOCUSEDON}[1]{‌\textbf{\color{focusedcolor}{#1}}}
 
 % Note
 %--------------------------------------------------------------------------
 \newcommand{\NOTE}[2][-1.5cm]{
     \p
     {\hspace{#1}{\includegraphics[width=5mm]{\templateroot/images/notemark.png}}}
-    \hspace{7mm} #2
+    \hspace{7mm} {\normalfont\itshape #2}
 }
 
 % theorem styling
@@ -237,8 +257,9 @@
     enhanced jigsaw,
     breakable,
     pad at break*=1mm,
-    colback=theoremblue!5,
-    colframe=theoremblue!50]}
+    colback=theoremblue!10,
+    colframe=theoremblue!35
+    ]}
 {\end{tcolorbox}}
 
 
@@ -278,9 +299,10 @@
     colback=white,
     boxrule=0pt,
     frame hidden,
-    borderline east={1.5mm}{-2mm}{black!10}]
-    \hspace{-6.5mm}\colorbox{black!10}{\refstepcounter{problem}\par\medskip{~\theproblem}}
-    \hspace{3mm}{\small\color{gray}{\textbf{#1}}}
+    borderline east={1.5mm}{-2mm}{problembordercolor!10}]
+    \Mitra
+    \hspace{-6.5mm}\colorbox{problembordercolor!10}{\refstepcounter{problem}\par\medskip{~\theproblem}}
+    \hspace{3mm}{\small\color{problembordercolor!75}{\textbf{#1}}}
     \vspace{2mm}
 
 \vspace{1mm}}
@@ -297,20 +319,19 @@
 
 % solution
 \newcommand{\SOLUTION}[2][پاسخ]{
-    
+    \Mitra\itshape
+
     \solutionmark[#1]
     \vspace{2mm}
-    \begin{itshape}
-        
-        #2
-    \end{itshape}
+
+    #2
 }
 
 
 
 % end problem styling
 %--------------------------------------------------------------------------
-\newcommand{\COLOREDEPROBLEM}[2][]{
+\newcommand{\COLOREDEPROBLEM}[3][]{
     \begin{tcolorbox}[
         enhanced jigsaw,
         breakable,
@@ -319,13 +340,15 @@
         boxrule=0pt,
         frame hidden,
         borderline north={1.5mm}{-1mm}{#2}]
+    \Mitra
     \vspace{-10mm}\hspace{-5mm}{\colorbox{#2}{\refstepcounter{problem}\par\medskip{~\theproblem} #1}}
     \end{tcolorbox}
     \vspace{1mm}
+    {\Mitra #3}
 }
 
-\newcommand{\EPROBLEM}[1][]{
-    \COLOREDEPROBLEM[#1]{black!10}
+\newcommand{\EPROBLEM}[2][]{
+    \COLOREDEPROBLEM[#1]{problembordercolor!10}{#2}
 }
 
 % end wrong solution  styling
@@ -333,7 +356,7 @@
 
 %  wrong solution mark
 \newcommand{\EWsolutionmark}[1][پاسخ غلط]{
-    \vspace{-3mm}\hspace{-5.5mm}\colorbox{red!10}{\scriptsize\color{red}{#1}}
+    \vspace{-3mm}\hspace{-6mm}\colorbox{solutionred!35}{\color{white}{ #1 }}
     \vspace{1mm}
 }
 
@@ -346,7 +369,8 @@
         colback=white,
         boxrule=0pt,
         frame hidden,
-        borderline east={1.5mm}{-2mm}{red!10}]
+        borderline east={1.5mm}{-2mm}{solutionred!35}]
+        \Mitra\itshape
 
         \EWsolutionmark[#1]
         
@@ -362,7 +386,7 @@
 
 % end problem solution mark
 \newcommand{\Esolutionmark}[1][پاسخ]{
-    \vspace{-3mm}\hspace{-5.5mm}\colorbox{green!10}{\scriptsize\color{solutiongreen}{#1}}
+    \vspace{-3mm}\hspace{-6mm}\colorbox{solutiongreen!50}{\color{white}{ #1 }}
     \vspace{1mm}
 }
 
@@ -375,7 +399,8 @@
         colback=white,
         boxrule=0pt,
         frame hidden,
-        borderline east={1.5mm}{-2mm}{green!10}]
+        borderline east={1.5mm}{-2mm}{solutiongreen!50}]
+        \Mitra\itshape
 
         \Esolutionmark[#1]
         
@@ -403,8 +428,9 @@
     enhanced jigsaw,
     breakable,
     pad at break*=1mm,
-    colback=extrayellow!25,
-    colframe=extraorange!65]
+    colback=extrayellow!30,
+    colframe=extraorange]
+    \Yagut
     \begin{flushleft}
         \vspace{-1.1cm}
         \hspace*{-1.5in}\includegraphics[width=0.15\linewidth]{#1}
