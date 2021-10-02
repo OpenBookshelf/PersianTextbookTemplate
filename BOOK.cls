@@ -58,6 +58,7 @@
 \usepackage{pbox}
 \usepackage{amssymb}
 \usepackage{xifthen}
+\usepackage{extarrows}
 
 \RequirePackage[extrafootnotefeatures]{xepersian}
 \settextfont[
