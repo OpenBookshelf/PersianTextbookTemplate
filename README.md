@@ -284,7 +284,7 @@ $$|\bigcup\limits_{i=1}^n A_i| = \sum\limits_{k=1}^n (-1)^{k+1} (\sum\limits_{1 
 <img align="right" width="45%" src="./readme_images/PROBLEM,SOLUTION.png">
 
 <code style="margin-right:3%;">
-\begin{PROBLEM}[problem name] ... \end{THEOREM}
+\begin{PROBLEM}[problem name] ... \end{PROBLEM}
 </code>
 <br/>
 <code style="margin-right:3%;">
@@ -342,7 +342,7 @@ $$|\bigcup\limits_{i=1}^n A_i| = \sum\limits_{k=1}^n (-1)^{k+1} (\sum\limits_{1 
 <p align="right" style="margin-left:21%;">
 &#x202b;
 اگر از این دستور، درون دستورات دیگر استفاده کنید، ممکن است میزان عقب‌نشینی آن به سمت راست مطلوب شما نباشد.
-می‌توانید با مقدار‌دهی ورودی اول آن (که مقدار پیشفرض دارد و در مثال بالا از آن استفاده نکردیم)، میزان این عقب‌نشینی
+می‌توانید با مقدار‌دهی ورودی اول آن (که مقدار پیشفرض دارد)، میزان این عقب‌نشینی
 را تعیین کنید.
 </p>
 
@@ -512,7 +512,7 @@ $$|\bigcup\limits_{i=1}^n A_i| = \sum\limits_{k=1}^n (-1)^{k+1} (\sum\limits_{1 
 چپ به راست است.
 لازم است یک لوگو متناظر در
 آدرس
-\lr{Contents/References/Icons/logo-name.png}
+Contents/References/Icons/logo-name.png
 قرار گیرد.
 </p>
 
